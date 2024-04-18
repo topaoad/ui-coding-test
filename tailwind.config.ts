@@ -13,6 +13,8 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      // min-h-screenから44pxを引いた値を指定
+      minHeight: { "screen-68": "calc(100vh - 68px)" },
     },
   },
   plugins: [],

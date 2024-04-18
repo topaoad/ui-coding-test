@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# コーディングテスト
 
-## Getting Started
+## 要件
 
-First, run the development server:
+- Next.js を使用してください。(**App Router**が使用できるバージョン以降を使用してください。)
+- ヘッターとフッターはスクロールしても常に固定位置に表示されるようする。
+- 画像はフレーム内で以下の動作ができるようにする。
+  - 移動することができる
+  - 縮小・拡大することができる
+    ※回転できるようにする必要はありません。
+    スマートフォンでも操作できるようにしてください。
+- 画像の説明文(description)が長い場合はスクロールできるようにする。
+- style は **Tailwind CSS** を使用すること。
+- PC/スマートフォン表示に対応すること(レスポンシブデザイン対応)
+  - ただし実機でなく、Google Chrome の検証ツールで確認できればよい
+- ソースコードは Git で管理し、作成したソースコードは GitHub にアップロードすること
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+→ このうち、「移動することができる」は時間内に要件を満たす実装ができませんでした。
+「react-zoom-pan-pinch」というライブラリを使用して、画像の拡大・縮小のみ実装しました。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 課題報告事項
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 課題の取り組みに要した合計時間
+  - ４〜５時間
+- 実装内容
+  - トップページ〜絵画一覧ページ〜絵画詳細ページ
+- 着手にあたり参考にしたページや書籍、リポジトリなどがあれば
+  - [react-zoom-pan-pinch]ライブラリ関連の参考サイト
+- AI を利用した場合はどのように質問をしたのか（ボーナス要素）
+  - tailwind を使ったコンポーネントの実装例を聞きました。
+    「tailwind を使ったヘッダーコンポーネントを実装してほしい」などです。
+    その際グローバルメニューの実装なども併せて質問しました
+    なお、「画像はフレーム内で以下の動作ができるようにする。」については
+    AI への質問、ライブラリ、ライブラリを使わない実装のいずれも試みましたが、解決には至りませんでした。
+    実案件でしたら正直にわかる方の力を仰ぐ場面だったかと思います。
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## その他
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 今回はプルリクエストや eslint,prietter の設定などは省略しました。
+- react-zoom-pan-pinch で最低限の体裁を整える際、どうしても画像のフレーム領域をうまく確保できず、やむを得ず global.css に上書きしました。
