@@ -38,3 +38,7 @@
 
 - 今回はプルリクエストや eslint,prietter の設定などは省略しました。
 - react-zoom-pan-pinch で最低限の体裁を整える際、どうしても画像のフレーム領域をうまく確保できず、やむを得ず global.css に上書きしました。
+
+## テスト
+
+jest と cypress を使用しています。
